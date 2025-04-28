@@ -1,9 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 8081;
+const port = process.env.PORT; // 👈🏻 Sin || 8081, solo process.env.PORT
 
 app.use(cors());
 app.use(express.json());
@@ -13,5 +12,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Servidor escuchando en http://localhost:${port}`);
+  console.log(`Servidor escuchando en el puerto ${port}`);
 });
