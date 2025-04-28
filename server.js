@@ -13,7 +13,7 @@ app.use(express.json());
 // Montar las rutas en '/api'
 app.use('/api', userRoutes);
 
-// Iniciar el servidor
+// Iniciar el servidor sdf
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
